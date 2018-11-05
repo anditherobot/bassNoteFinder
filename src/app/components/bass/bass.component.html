@@ -1,0 +1,48 @@
+
+
+
+<section class="page-container">
+    <div class="notes">
+        <h1 style="text-align:center;">Bass note finder</h1>
+        
+        <ul class="notesList">
+            <li *ngFor="let note of notes"
+            (click)="getNote(note, $index)" 
+            ng-class="{active: $index == selected}">{{note}}</li>
+        </ul>
+
+      
+    </div>
+
+
+
+
+    <div class="neckTable" style="border: 7px solid #000;" >
+            <div class="divTableBody">
+            <div class="divTableRow">
+            <div  class="divTableCell" *ngFor=" let g of gString "><span ng-class="{highlightCell: displayNotesonG.includes($index)}" class="note">{{g}} </span> </div>
+            
+            </div>
+            <div class="divTableRow">
+            
+            <div class="divTableCell" *ngFor=" let d of dString "><span  ng-class="{highlightCell: displayNotesonD.includes($index)}" class="note">{{d}} </span></div>
+            </div>
+            <div class="divTableRow">
+            
+            <div  class="divTableCell" *ngFor=" let a of aString "><span  ng-class="{highlightCell: displayNotesonA.includes($index)}" class="note">{{a}} </span></div>
+            </div>
+            <div class="divTableRow">
+            
+            <div class="divTableCell" *ngFor=" let e of eString "><span  ng-class="{highlightCell: displayNotesonE.includes($index)}" class="note">{{e}} </span></div>
+          
+            </div>
+            <div class="divTableRow">
+            
+            <div class="divTableCell frets" *ngFor=" let fret of fretNumber" >{{fret}}</div>
+            </div>
+            </div>
+            </div>
+            <!-- neck.com -->
+
+            <p>By Andi Milhomme</p>
+        </section>

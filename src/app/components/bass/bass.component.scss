@@ -1,0 +1,124 @@
+.notesList {
+    list-style: none;
+    border: 2px dotted black;
+    height: 50px;
+    margin-right: 20px;
+
+}
+.notesList > li:hover {
+   background-color: aqua;
+    border: 1px dotted black;
+  
+}
+.active {
+    background-color: red !important;
+    color: black !important;
+}
+
+.highlight {
+    background-color: green!important;
+    color: black !important;
+    font-weight: bold !important;
+    border: 3px dashed white  !important;;
+}
+
+.highlightCell {
+    background-color: green!important;
+    color: black !important;
+    font-weight: bold !important;
+    border: 2px dotted grey  !important;
+    box-shadow: 2px 2px #888888;
+    
+}
+
+
+.notesList li {
+    display:inline-block;
+    margin: 4px;
+    padding: 10px;
+    border-radius: 30px;
+    margin-bottom: 4px;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+
+}
+
+.note {
+    
+    display:inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    font-weight: bold;
+    color: white;
+    background-color: grey;
+    border: 2px solid black;
+    
+}
+
+.notes {
+    width: 50%;
+  margin: 0 auto;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+/*Alternate*/
+
+/* neck.com */
+.neckTable{
+	display: table;
+    overflow-x: auto;
+    table-layout: fixed;
+    width: 50%;
+    margin: 0 auto;
+}
+.divTableRow {
+	display: table-row;
+}
+
+.divTableCell {
+	border: 1px solid #999999;
+	display: table-cell;
+    background-color: bisque;
+    width: 80px;
+    max-width:100px;
+    font-weight: bold;
+    color: white;
+    background-color: burlywood;
+    text-align: center;
+}
+
+.frets {
+    background-color: black;
+}
+.divTableBody {
+	display: table-row-group;
+}
+
+/*Page layout */
+
+.page-container {
+    padding:15px;
+    margin-left: 10px;
+    margin-right:10px;
+    background-color: gray;
+}
+
+
+.test{
+    list-style: none;
+    
+}
+
+.test li {
+    display: inline-block;
+    border: 2px solid blue;
+}
