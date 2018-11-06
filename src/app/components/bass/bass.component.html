@@ -20,7 +20,7 @@
     <div class="neckTable" style="border: 7px solid #000;" >
             <div class="divTableBody">
             <div class="divTableRow">
-            <div  class="divTableCell" *ngFor=" let g of gString "><span ng-class="{highlightCell: displayNotesonG.includes($index)}" class="note">{{g}} </span> </div>
+            <div  class="divTableCell" *ngFor=" let fret of gString "><span [ngClass]="{highlightCell: displayNotesonG.includes(fret)}" class="note">{{g}} </span> </div>
             
             </div>
             <div class="divTableRow">
