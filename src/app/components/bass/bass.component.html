@@ -6,9 +6,9 @@
         <h1 style="text-align:center;">Bass note finder</h1>
         
         <ul class="notesList">
-            <li *ngFor="let note of notes"
-            (click)="getNote(note, $index)" 
-            ng-class="{active: $index == selected}">{{note}}</li>
+            <li  class="notesList-item" *ngFor="let note of notes"
+            (click)="showOnFret(note)" 
+            [ngClass]="{notesListActive: note == selected}">{{note | uppercase}}</li>
         </ul>
 
       

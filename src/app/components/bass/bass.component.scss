@@ -1,19 +1,17 @@
 .notesList {
     list-style: none;
     border: 2px dotted black;
-    height: 50px;
+    height: 60px;
+    width: 570px;
     margin-right: 20px;
 
 }
-.notesList > li:hover {
+.notesList-item:hover {
    background-color: aqua;
     border: 1px dotted black;
   
 }
-.active {
-    background-color: red !important;
-    color: black !important;
-}
+
 
 .highlight {
     background-color: green!important;
@@ -32,16 +30,23 @@
 }
 
 
-.notesList li {
+.notesList-item {
     display:inline-block;
-    margin: 4px;
-    padding: 10px;
+    margin-right: 15px;
+    margin-top: 15px;
+    padding: 5px;
     border-radius: 30px;
     margin-bottom: 4px;
     font-weight: bold;
     color: white;
     background-color: green;
+    border: 1px solid black;
 
+}
+
+.notesListActive {
+    background-color: red ;
+    color: black ;
 }
 
 .note {
