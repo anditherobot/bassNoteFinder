@@ -20,20 +20,20 @@
     <div class="neckTable" style="border: 7px solid #000;" >
             <div class="divTableBody">
             <div class="divTableRow">
-            <div  class="divTableCell" *ngFor=" let fret of gString "><span [ngClass]="{highlightCell: displayNotesonG.includes(fret)}" class="note">{{g}} </span> </div>
+            <div  class="divTableCell" *ngFor=" let fret of gString"><span [ngClass]="{highlightCell: fret == selected}" class="note">{{fret}} </span> </div>
             
             </div>
             <div class="divTableRow">
             
-            <div class="divTableCell" *ngFor=" let d of dString "><span  ng-class="{highlightCell: displayNotesonD.includes($index)}" class="note">{{d}} </span></div>
+            <div class="divTableCell" *ngFor=" let fret of dString"><span  [ngClass]="{highlightCell: fret == selected}" class="note">{{fret}} </span></div>
             </div>
             <div class="divTableRow">
             
-            <div  class="divTableCell" *ngFor=" let a of aString "><span  ng-class="{highlightCell: displayNotesonA.includes($index)}" class="note">{{a}} </span></div>
+            <div  class="divTableCell" *ngFor=" let fret of aString"><span  [ngClass]="{highlightCell: fret == selected}" class="note">{{fret}} </span></div>
             </div>
             <div class="divTableRow">
             
-            <div class="divTableCell" *ngFor=" let e of eString "><span  ng-class="{highlightCell: displayNotesonE.includes($index)}" class="note">{{e}} </span></div>
+            <div class="divTableCell" *ngFor=" let fret of eString"><span  [ngClass]="{highlightCell: fret == selected}" class="note">{{fret}} </span></div>
           
             </div>
             <div class="divTableRow">
