@@ -63,6 +63,12 @@
     
 }
 
+.first {
+    background-color: darkgray;
+    color:black;
+    border: 2px solid white;
+}
+
 .notes {
     width: 50%;
   margin: 0 auto;
@@ -99,6 +105,11 @@ p {
     color: white;
     background-color: burlywood;
     text-align: center;
+}
+
+.divTableCell:first-child {
+    border-right: 5px solid black;
+    background-color: white;
 }
 
 .frets {

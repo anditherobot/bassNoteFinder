@@ -49,8 +49,6 @@ selected: string;
           indices.push(selection);
         }
       }
-      console.log(this.displayNotesonA);
-      console.log('indices', indices);
       return indices;
    }
   
