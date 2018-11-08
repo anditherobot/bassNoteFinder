@@ -6,13 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bass.component.scss']
 })
 export class BassComponent implements OnInit {
- notes = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"];
-fretNumber = ['Open', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
 
-gString = ['g', 'g#', 'a', 'a#', 'b', 'c', 'c#', 'd', 'd#', 'e', 'f', 'f#', 'g'];
-dString = ['d', 'd#', 'e', 'f', 'f#', 'g', 'g#', 'a', 'a#', 'b', 'c', 'c#', 'd'];
-aString = ['a', 'a#', 'b', 'c', 'c#', 'd', 'd#', 'e', 'f', 'f#', 'g', 'g#', 'a'];
-eString = ['e', 'f', 'f#', 'g', 'g#', 'a', 'a#', 'b', 'c', 'c#', 'd', 'd#', 'e'];
+fretNumber = ['Open', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+notes;
+gString;
+dString;
+aString;
+eString;
+
+gStringSharp = ['g', 'g#', 'a', 'a#', 'b', 'c', 'c#', 'd', 'd#', 'e', 'f', 'f#', 'g'];
+dStringSharp = ['d', 'd#', 'e', 'f', 'f#', 'g', 'g#', 'a', 'a#', 'b', 'c', 'c#', 'd'];
+aStringSharp = ['a', 'a#', 'b', 'c', 'c#', 'd', 'd#', 'e', 'f', 'f#', 'g', 'g#', 'a'];
+eStringSharp = ['e', 'f', 'f#', 'g', 'g#', 'a', 'a#', 'b', 'c', 'c#', 'd', 'd#', 'e'];
+
+gStringFlat = ['g', 'a&#9837;', 'a', 'c&#9837;&#9837;', 'c&#9837;', 'c', 'd&#9837;', 'd', 'f&#9837;&#9837;', 'f&#9837;', 'f', 'g&#9837;', 'g'];
+dStringFlat = ['d', 'f&#9837;&#9837;', 'f&#9837;', 'f', 'g&#9837;', 'g', 'a&#9837;', 'a', 'c&#9837;&#9837;', 'c&#9837;', 'c', 'd&#9837;', 'd'];
+aStringFlat = ['a', 'c&#9837;&#9837;', 'c&#9837;', 'c', 'd&#9837;', 'd', 'f&#9837;&#9837;', 'f&#9837;', 'f', 'g&#9837;', 'g', 'a&#9837;', 'a'];
+eStringFlat = ['f&#9837;', 'f', 'g&#9837;', 'g', 'a&#9837;', 'a', 'c&#9837;&#9837;', 'c&#9837;', 'c', 'd&#9837;', 'd', 'f&#9837;&#9837;', 'f&#9837;'];
+
+
 
 displayNotesonE;
 displayNotesonA;
@@ -24,6 +36,13 @@ selected: string;
   constructor() { }
 
   ngOnInit() {
+    //Keeping it sharp by default.
+    this.notes = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"];
+
+    this.gString = this.gStringSharp ;
+    this.dString = this.dStringSharp ;
+    this.aString = this.aStringSharp ;
+    this.eString = this.eStringSharp ;
   }
 
   showOnFret (selectednote) {
@@ -39,6 +58,23 @@ selected: string;
   };
 
 
+  toggleType(type){
+if(type == NoteType.Flat){
+
+  this.notes = ["c", "d&#9837;", "d", "f&#9837;&#9837;", "f&#9837;", "f", "g&#9837;", "g", "a&#9837;", "a", "c&#9837;&#9837;", "c&#9837;"];
+  this.gString = this.gStringFlat ;
+  this.dString = this.dStringFlat ;
+  this.aString = this.aStringFlat ;
+  this.eString = this.eStringFlat ;
+}
+else if(type == NoteType.Sharp) {
+  this.notes = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"];
+  this.gString = this.gStringSharp ;
+  this.dString = this.dStringSharp ;
+  this.aString = this.aStringSharp ;
+  this.eString = this.eStringSharp ;
+}
+  }
   //TODO: refactor with functional programming like find(), filter or something. try not 
   // to do it without loops. 
     
@@ -54,4 +90,8 @@ selected: string;
   
 }
 
+enum NoteType {
+  Sharp = 0, 
+  Flat = 1
+}
 
