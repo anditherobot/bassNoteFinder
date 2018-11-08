@@ -30,6 +30,7 @@
 }
 
 
+
 .notesList-item {
     display:inline-block;
     margin-right: 15px;
@@ -110,11 +111,17 @@ p {
 .divTableCell:first-child {
     border-right: 5px solid black;
     background-color: white;
+    color: black;
 }
 
-.frets {
+.fretNumbers {
     background-color: black;
 }
+.highlightFret{
+    background-color: white;
+    color: black;
+}
+
 .divTableBody {
 	display: table-row-group;
 }

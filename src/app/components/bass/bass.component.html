@@ -40,7 +40,9 @@
             </div>
             <div class="divTableRow">
             
-            <div class="divTableCell frets" *ngFor=" let fret of fretNumber ; let first = first" >{{fret}}</div>
+            <div class="divTableCell fretNumbers" *ngFor=" let num of fretNumber ; let first = first"  
+            [ngClass]="{'highlightFret': num == 3 || num ==5 || num == 7 || num == 9 || num == 12,
+             first: first}" >{{num}}</div>
             </div>
             </div>
             </div>
