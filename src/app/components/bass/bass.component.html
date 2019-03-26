@@ -3,9 +3,9 @@
   
         <div class="toolbar">
    
-    <div class="controls">
-      <button class="button" (click)="toggleType(0)">Sharp</button>
-      <button class="button" (click)="toggleType(1)">Flat</button>
+    <div class="pitch-control">
+      <button class="button" (click)="toggleType(0)" [ngClass]="togglePitch === 0 ? 'is-light' : 'is-dark' ">Sharp</button>
+      <button class="button" (click)="toggleType(1) " [ngClass]="togglePitch === 1 ? 'is-light' : 'is-dark' ">Flat</button>
     </div>
     <ul class="notesList">
       <li

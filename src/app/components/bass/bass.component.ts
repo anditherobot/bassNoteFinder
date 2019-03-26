@@ -65,10 +65,10 @@ fretNumber = this.notesData.fretNumber;
 
   };
 
-
+togglePitch = 0;
   toggleType(type) {
     if (type == NoteType.Flat) {
-
+     this.togglePitch = 1;
       this.notes = ["c", "d&#9837;", "d", "f&#9837;", "f&#9837;", "f", "g&#9837;", "g", "a&#9837;", "a", "c&#9837;"];
       this.gString = this.gStringFlat;
       this.dString = this.dStringFlat;
@@ -76,6 +76,7 @@ fretNumber = this.notesData.fretNumber;
       this.eString = this.eStringFlat;
     }
     else if (type == NoteType.Sharp) {
+      this.togglePitch = 0;
       this.notes = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"];
       this.gString = this.gStringSharp;
       this.dString = this.dStringSharp;
