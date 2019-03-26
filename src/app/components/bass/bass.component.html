@@ -3,10 +3,11 @@
 
 <section class="page-container">
     <div class="notes">
-        <h1 style="text-align:center;">Bass note finder</h1>
-      <button (click)="toggleType(0)">Sharp</button>
-      <button (click)="toggleType(1)">Flat</button>
-        
+        <h1 class="title">BASS NOTE FINDER</h1>
+        <div class= "container">
+      <button class="button" (click)="toggleType(0)">Sharp</button>
+      <button class="button" (click)="toggleType(1)">Flat</button>
+    </div>
       <ul class="notesList">
             <li  class="notesList-item" *ngFor="let note of notes"
             (click)="showOnFret(note)" 
@@ -50,5 +51,7 @@
             </div>
             <!-- neck.com -->
 
-            <p>By Andi Milhomme</p>
+          
+
+            <h3> By {{author.name | uppercase}} {{author.lastName | uppercase}}</h3>
         </section>
