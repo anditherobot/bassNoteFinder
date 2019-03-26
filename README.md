@@ -9,7 +9,7 @@ How can I make this usable
 * Keyboard shortcuts?
 
 
-
+![Screenshot](app-screenshot.png)
 
 ## Technical
 ------------------------------------
