@@ -70,10 +70,7 @@
     border: 2px solid white;
 }
 
-.notes {
-    width: 50%;
-  margin: 0 auto;
-}
+
 
 p {
     text-align: center;
@@ -133,8 +130,37 @@ p {
     margin-left: 10px;
     margin-right:10px;
     background-color: gray;
+    
+
+  
+
 }
 
+h1 {
+    
+    text-align: center;
+    border-bottom: 5px dotted black;
+    padding: 5px  ;
+
+}
+
+
+.toolbar {
+    
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+    padding: 2px;
+
+
+
+    & .controls {
+        border: 2px solid blue;
+
+    }
+
+
+ }
 
 .test{
     list-style: none;

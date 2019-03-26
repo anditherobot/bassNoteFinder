@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {NotesService} from '../../notes.service';
 @Component({
   selector: 'app-bass',
   templateUrl: './bass.component.html',
@@ -7,22 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BassComponent implements OnInit {
 
-  fretNumber = ['Open', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+  constructor(private notesData: NotesService) {
+
+   }
+
+fretNumber = this.notesData.fretNumber;
   notes;
+  
+  //Strings
   gString;
   dString;
   aString;
   eString;
 
-  gStringSharp = ['g', 'g#', 'a', 'a#', 'b', 'c', 'c#', 'd', 'd#', 'e', 'f', 'f#', 'g'];
-  dStringSharp = ['d', 'd#', 'e', 'f', 'f#', 'g', 'g#', 'a', 'a#', 'b', 'c', 'c#', 'd'];
-  aStringSharp = ['a', 'a#', 'b', 'c', 'c#', 'd', 'd#', 'e', 'f', 'f#', 'g', 'g#', 'a'];
-  eStringSharp = ['e', 'f', 'f#', 'g', 'g#', 'a', 'a#', 'b', 'c', 'c#', 'd', 'd#', 'e'];
+  //Sharps
+  gStringSharp = this.notesData.gStringSharp;
+  dStringSharp = this.notesData.dStringSharp;
+  aStringSharp = this.notesData.aStringSharp;
+  eStringSharp = this.notesData.eStringSharp;
 
-  gStringFlat = ['g', 'a&#9837;', 'a', 'c&#9837;', 'c&#9837;', 'c', 'd&#9837;', 'd', 'f&#9837;', 'f&#9837;', 'f', 'g&#9837;', 'g'];
-  dStringFlat = ['d', 'f&#9837;', 'f&#9837;', 'f', 'g&#9837;', 'g', 'a&#9837;', 'a', 'c&#9837;', 'c&#9837;', 'c', 'd&#9837;', 'd'];
-  aStringFlat = ['a', 'c&#9837;', 'c&#9837;', 'c', 'd&#9837;', 'd', 'f&#9837;', 'f&#9837;', 'f', 'g&#9837;', 'g', 'a&#9837;', 'a'];
-  eStringFlat = ['f&#9837;', 'f', 'g&#9837;', 'g', 'a&#9837;', 'a', 'c&#9837;', 'c&#9837;', 'c', 'd&#9837;', 'd', 'f&#9837;', 'f&#9837;'];
+  // Flats
+  gStringFlat = this.notesData.gStringFlat;
+  dStringFlat = this.notesData.dStringFlat;
+  aStringFlat = this.notesData.aStringFlat;
+  eStringFlat = this.notesData.eStringFlat;
 
 
 
@@ -33,7 +41,7 @@ export class BassComponent implements OnInit {
 
   selected: string;
   author = { id: 1, name: 'andi', lastName: 'milhomme' };
-  constructor() { }
+
 
   ngOnInit() {
     //Keeping it sharp by default.

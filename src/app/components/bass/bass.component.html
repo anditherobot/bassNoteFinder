@@ -1,57 +1,95 @@
-
-
-
 <section class="page-container">
-    <div class="notes">
         <h1 class="title">BASS NOTE FINDER</h1>
-        <div class= "container">
+  
+        <div class="toolbar">
+   
+    <div class="controls">
       <button class="button" (click)="toggleType(0)">Sharp</button>
       <button class="button" (click)="toggleType(1)">Flat</button>
     </div>
-      <ul class="notesList">
-            <li  class="notesList-item" *ngFor="let note of notes"
-            (click)="showOnFret(note)" 
-            [ngClass]="{notesListActive: note == selected}" [innerHTML]="note"></li>
-        </ul>
+    <ul class="notesList">
+      <li
+        class="notesList-item"
+        *ngFor="let note of notes"
+        (click)="showOnFret(note)"
+        [ngClass]="{ notesListActive: note == selected }"
+        [innerHTML]="note"
+      ></li>
+    </ul>
+  </div>
 
-      
+  <!--Sharpend, flatten, -->
+
+  <div class="neckTable" style="border: 7px solid #000;">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <div
+          class="divTableCell"
+          *ngFor="let fret of gString; let first = first"
+        >
+          <span
+            [ngClass]="{ highlightCell: fret == selected, first: first }"
+            class="note"
+            [innerHTML]="fret"
+          >
+          </span>
+        </div>
+      </div>
+      <div class="divTableRow">
+        <div
+          class="divTableCell"
+          *ngFor="let fret of dString; let first = first"
+        >
+          <span
+            [ngClass]="{ highlightCell: fret == selected, first: first }"
+            class="note"
+            [innerHTML]="fret"
+          >
+          </span>
+        </div>
+      </div>
+      <div class="divTableRow">
+        <div
+          class="divTableCell"
+          *ngFor="let fret of aString; let first = first"
+        >
+          <span
+            [ngClass]="{ highlightCell: fret == selected, first: first }"
+            class="note"
+            [innerHTML]="fret"
+          >
+          </span>
+        </div>
+      </div>
+      <div class="divTableRow">
+        <div
+          class="divTableCell"
+          *ngFor="let fret of eString; let first = first"
+        >
+          <span
+            [ngClass]="{ highlightCell: fret == selected, first: first }"
+            class="note"
+            [innerHTML]="fret"
+          >
+          </span>
+        </div>
+      </div>
+      <div class="divTableRow">
+        <div
+          class="divTableCell fretNumbers"
+          *ngFor="let num of fretNumber; let first = first"
+          [ngClass]="{
+            highlightFret:
+              num == 3 || num == 5 || num == 7 || num == 9 || num == 12,
+            first: first
+          }"
+        >
+          {{ num }}
+        </div>
+      </div>
     </div>
+  </div>
+  <!-- neck.com -->
 
-    <!--Sharpend, flatten, -->
-
-
-
-
-    <div class="neckTable" style="border: 7px solid #000;" >
-            <div class="divTableBody">
-            <div class="divTableRow">
-            <div  class="divTableCell" *ngFor=" let fret of gString ; let first = first"><span [ngClass]="{highlightCell: fret == selected, first: first}" class="note" [innerHTML]="fret"> </span> </div>
-            
-            </div> 
-            <div class="divTableRow"> 
-          
-            <div class="divTableCell" *ngFor=" let fret of dString ; let first = first"><span  [ngClass]="{highlightCell: fret == selected, first: first}" class="note" [innerHTML]="fret"> </span></div>
-            </div> 
-            <div class="divTableRow">
-          
-            <div  class="divTableCell" *ngFor=" let fret of aString ; let first = first"><span  [ngClass]="{highlightCell: fret == selected, first: first}" class="note" [innerHTML]="fret"> </span></div>
-            </div> 
-            <div class="divTableRow">
-             
-            <div class="divTableCell" *ngFor=" let fret of eString ; let first = first"><span  [ngClass]="{highlightCell: fret == selected, first: first}" class="note" [innerHTML]="fret"> </span></div>
-          
-            </div>
-            <div class="divTableRow">
-            
-            <div class="divTableCell fretNumbers" *ngFor=" let num of fretNumber ; let first = first"  
-            [ngClass]="{'highlightFret': num == 3 || num ==5 || num == 7 || num == 9 || num == 12,
-             first: first}" >{{num}}</div>
-            </div>
-            </div>
-            </div>
-            <!-- neck.com -->
-
-          
-
-            <h3> By {{author.name | uppercase}} {{author.lastName | uppercase}}</h3>
-        </section>
+  <h3>By {{ author.name | uppercase }} {{ author.lastName | uppercase }}</h3>
+</section>
