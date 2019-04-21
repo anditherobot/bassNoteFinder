@@ -32,8 +32,7 @@
         background-color: red ;
         color: black ;
     }
-
-    
+   
 
 }
 
@@ -89,22 +88,42 @@ p {
 /* neck.com */
 .neck{
     display: grid;
-    grid-template-rows: repeat(4, 40px);
-    grid-template-columns: repeat(13, 80px);
-    grid-gap: 10px 10px;
-    justify-items: center;
+   grid-template-rows: repeat(4, 1fr);
     background-color: bisque;
     height: auto;
+    border: 7px solid #000;
+    grid-row-gap: 15px;
 
     & .string{
-       margin-top: 10px;
-       margin-bottom: 10px;
       
-        width: auto;
-        max-width:100px;
+        text-transform: uppercase;
+        width: 100%;
+       justify-content: space-between;
         font-weight: bold;
         align-items: center;
         display: flex;
+
+        & .note-container{
+
+        }
+    }
+    
+    
+    
+    & .frets {
+        display: flex;
+        justify-content: space-between;
+
+        .fretNumbers {
+            background-color: black;
+            width: 80px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .highlightFret{
+            background-color: white;
+            color: black;
+        }
     }
 
     & .string:first-child {
@@ -135,17 +154,9 @@ p {
     color: black;
 }
 
-.fretNumbers {
-    background-color: black;
-}
-.highlightFret{
-    background-color: white;
-    color: black;
-}
 
-.divTableBody {
-	display: table-row-group;
-}
+
+
 
 /*Page layout */
 
