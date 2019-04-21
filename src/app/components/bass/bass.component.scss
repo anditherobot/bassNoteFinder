@@ -28,6 +28,11 @@
     
     }
 
+    & .notesListActive {
+        background-color: red ;
+        color: black ;
+    }
+
     
 
 }
@@ -53,10 +58,7 @@
 
 
 
-.notesListActive {
-    background-color: red ;
-    color: black ;
-}
+
 
 .note {
     
