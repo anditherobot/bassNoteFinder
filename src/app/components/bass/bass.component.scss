@@ -1,9 +1,27 @@
 .notesList {
+    display: flex;
     list-style: none;
     border: 2px dotted black;
-    height: 60px;
-    width: 570px;
-    margin-right: 20px;
+   justify-content: space-evenly;
+    padding: 5px;
+
+    & .notesList-item {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        padding: 5px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        background-color: green;
+        border: 1px solid black;
+    
+    }
+    
 
 }
 .notesList-item:hover {
@@ -31,19 +49,6 @@
 
 
 
-.notesList-item {
-    display:inline-block;
-    margin-right: 15px;
-    margin-top: 15px;
-    padding: 5px;
-    border-radius: 30px;
-    margin-bottom: 4px;
-    font-weight: bold;
-    color: white;
-    background-color: green;
-    border: 1px solid black;
-
-}
 
 .notesListActive {
     background-color: red ;
