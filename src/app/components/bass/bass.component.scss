@@ -93,12 +93,14 @@ p {
   & .frets {
     display: flex;
     justify-content: space-between;
+    border-top: 3px dotted black;
 
     .fretNumbers {
       background-color: black;
       width: 65px;
       text-align: center;
       font-weight: bold;
+      color: white;
     }
     .highlightFret {
       background-color: white;
