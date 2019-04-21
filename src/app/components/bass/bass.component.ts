@@ -69,7 +69,7 @@ togglePitch = 0;
   toggleType(type) {
     if (type == NoteType.Flat) {
      this.togglePitch = 1;
-      this.notes = ["c", "d&#9837;", "d", "f&#9837;", "f&#9837;", "f", "g&#9837;", "g", "a&#9837;", "a", "c&#9837;"];
+      this.notes = ["c", "d&#9837;", "d", "e&#9837", "e", "f",  "g&#9837;", "g", "a&#9837;", "a", "b&#9837;", "b"];
       this.gString = this.gStringFlat;
       this.dString = this.dStringFlat;
       this.aString = this.aStringFlat;
