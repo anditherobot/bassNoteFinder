@@ -27,7 +27,7 @@
       </span></div>
   </section>
   <section class="string">
-    <div cclass="note-container" *ngFor="let fret of dString; let first = first"> 
+    <div class="note-container" *ngFor="let fret of dString; let first = first"> 
       <span [ngClass]="{ highlightCell: fret == selected, first: first }"
         class="note" [innerHTML]="fret">
       </span></div>
