@@ -13,7 +13,8 @@ export class BassComponent implements OnInit {
 
 fretNumber = this.notesData.fretNumber;
   notes;
-  
+  sharpNotes = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"]; ;
+  flatNotes = ["c", "d&#9837;", "d", "e&#9837", "e", "f",  "g&#9837;", "g", "a&#9837;", "a", "b&#9837;", "b"];
   //Strings
   gString;
   dString;
@@ -23,6 +24,7 @@ fretNumber = this.notesData.fretNumber;
   //Sharps
 
   sharpenNotes(){
+    this.notes = this.notesData.sharpNotes;
     this.gString = this.notesData.gStringSharp;
     this.dString = this.notesData.dStringSharp;
     this.aString = this.notesData.aStringSharp;
@@ -31,14 +33,13 @@ fretNumber = this.notesData.fretNumber;
 
 
   flatenNotes(){
+    this.notes = this.notesData.flatNotes;
     this.gString = this.notesData.gStringFlat;
     this.dString = this.notesData.dStringFlat;
     this.aString = this.notesData.aStringFlat;
     this.eString = this.notesData.eStringFlat;
   }
   // Flats
-
-
 
 
   displayNotesonE;
@@ -52,7 +53,6 @@ fretNumber = this.notesData.fretNumber;
 
   ngOnInit() {
     //Keeping it sharp by default.
-    this.notes = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"];
 
     this.sharpenNotes();
   }
@@ -73,12 +73,12 @@ togglePitch = 0;
   toggleType(type) {
     if (type == NoteType.Flat) {
      this.togglePitch = 1;
-      this.notes = ["c", "d&#9837;", "d", "e&#9837", "e", "f",  "g&#9837;", "g", "a&#9837;", "a", "b&#9837;", "b"];
+  
       this.flatenNotes();
     }
     else if (type == NoteType.Sharp) {
       this.togglePitch = 0;
-      this.notes = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"];
+      
       this.sharpenNotes();
     }
   }
