@@ -69,6 +69,17 @@ export class BassComponent implements OnInit {
 
   };
 
+
+  highlight(selection, array) {
+    let indices = [];
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === selection) {
+        indices.push(selection);
+      }
+    }
+    return indices;
+  }
+
 togglePitch = 0;
   toggleType(type) {
     if (type == NoteType.Flat) {
@@ -85,15 +96,6 @@ togglePitch = 0;
   //TODO: refactor with functional programming like find(), filter or something. try not 
   // to do it without loops. 
 
-  highlight(selection, array) {
-    let indices = [];
-    for (let i = 0; i < array.length; i++) {
-      if (array[i] === selection) {
-        indices.push(selection);
-      }
-    }
-    return indices;
-  }
 
 
 
