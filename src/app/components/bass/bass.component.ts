@@ -11,7 +11,7 @@ export class BassComponent implements OnInit {
 
    }
 
-fretNumber = this.notesData.fretNumber;
+  fretNumber = this.notesData.fretNumber;
   notes;
   sharpNotes = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"]; ;
   flatNotes = ["c", "d&#9837;", "d", "e&#9837", "e", "f",  "g&#9837;", "g", "a&#9837;", "a", "b&#9837;", "b"];
@@ -57,7 +57,7 @@ fretNumber = this.notesData.fretNumber;
     this.sharpenNotes();
   }
 
-  showOnFret(selectednote) {
+  showNotes(selectednote) {
     this.selected = selectednote;
     console.log('get note', selectednote);
 

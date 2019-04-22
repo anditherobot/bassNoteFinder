@@ -11,7 +11,7 @@
       <li
         class="notesList-item"
         *ngFor="let note of notes"
-        (click)="showOnFret(note)"
+        (click)="showNotes(note)"
         [ngClass]="{ notesListActive: note == selected }"
         [innerHTML]="note"
       ></li>
