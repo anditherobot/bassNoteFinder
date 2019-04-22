@@ -13,8 +13,7 @@ export class BassComponent implements OnInit {
 
   fretNumber = this.notesData.fretNumber;
   notes;
-  sharpNotes = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"]; ;
-  flatNotes = ["c", "d&#9837;", "d", "e&#9837", "e", "f",  "g&#9837;", "g", "a&#9837;", "a", "b&#9837;", "b"];
+ 
   //Strings
   gString;
   dString;
@@ -39,14 +38,9 @@ export class BassComponent implements OnInit {
     this.aString = this.notesData.aStringFlat;
     this.eString = this.notesData.eStringFlat;
   }
-  // Flats
 
 
-  displayNotesonE;
-  displayNotesonA;
-  displayNotesonD;
-  displayNotesonG;
-
+  /*will add a class if selected*/
   selected: string;
   author = { id: 1, name: 'andi', lastName: 'milhomme' };
 
@@ -60,13 +54,6 @@ export class BassComponent implements OnInit {
   showNotes(selectednote) {
     this.selected = selectednote;
     console.log('get note', selectednote);
-
-
-    this.displayNotesonE = this.highlight(selectednote, this.eString);
-    this.displayNotesonA = this.highlight(selectednote, this.aString);
-    this.displayNotesonD = this.highlight(selectednote, this.dString);
-    this.displayNotesonG = this.highlight(selectednote, this.gString);
-
   };
 
 
@@ -95,10 +82,6 @@ togglePitch = 0;
   }
   //TODO: refactor with functional programming like find(), filter or something. try not 
   // to do it without loops. 
-
-
-
-
 
 }
   
