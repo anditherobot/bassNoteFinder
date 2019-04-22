@@ -21,16 +21,23 @@ fretNumber = this.notesData.fretNumber;
   eString;
 
   //Sharps
-  gStringSharp = this.notesData.gStringSharp;
-  dStringSharp = this.notesData.dStringSharp;
-  aStringSharp = this.notesData.aStringSharp;
-  eStringSharp = this.notesData.eStringSharp;
 
+  sharpenNotes(){
+    this.gString = this.notesData.gStringSharp;
+    this.dString = this.notesData.dStringSharp;
+    this.aString = this.notesData.aStringSharp;
+    this.eString = this.notesData.eStringSharp;
+  }
+
+
+  flatenNotes(){
+    this.gString = this.notesData.gStringFlat;
+    this.dString = this.notesData.dStringFlat;
+    this.aString = this.notesData.aStringFlat;
+    this.eString = this.notesData.eStringFlat;
+  }
   // Flats
-  gStringFlat = this.notesData.gStringFlat;
-  dStringFlat = this.notesData.dStringFlat;
-  aStringFlat = this.notesData.aStringFlat;
-  eStringFlat = this.notesData.eStringFlat;
+
 
 
 
@@ -47,10 +54,7 @@ fretNumber = this.notesData.fretNumber;
     //Keeping it sharp by default.
     this.notes = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"];
 
-    this.gString = this.gStringSharp;
-    this.dString = this.dStringSharp;
-    this.aString = this.aStringSharp;
-    this.eString = this.eStringSharp;
+    this.sharpenNotes();
   }
 
   showOnFret(selectednote) {
@@ -70,18 +74,12 @@ togglePitch = 0;
     if (type == NoteType.Flat) {
      this.togglePitch = 1;
       this.notes = ["c", "d&#9837;", "d", "e&#9837", "e", "f",  "g&#9837;", "g", "a&#9837;", "a", "b&#9837;", "b"];
-      this.gString = this.gStringFlat;
-      this.dString = this.dStringFlat;
-      this.aString = this.aStringFlat;
-      this.eString = this.eStringFlat;
+      this.flatenNotes();
     }
     else if (type == NoteType.Sharp) {
       this.togglePitch = 0;
       this.notes = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"];
-      this.gString = this.gStringSharp;
-      this.dString = this.dStringSharp;
-      this.aString = this.aStringSharp;
-      this.eString = this.eStringSharp;
+      this.sharpenNotes();
     }
   }
   //TODO: refactor with functional programming like find(), filter or something. try not 
