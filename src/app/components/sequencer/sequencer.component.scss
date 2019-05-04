@@ -1,0 +1,21 @@
+ul {
+    display: flex;
+    list-style: none;
+  
+  }
+
+  .activate {
+    border: 2px solid red;
+    border-radius: 50%;
+    margin: 10px;
+    padding: 10px;
+    background-color:lightblue;
+}
+
+ .inactive {
+    border: 2px solid grey;
+    border-radius: 50%;
+    margin: 10px;
+    padding: 10px;
+    background-color: lightcoral;
+}

@@ -1,0 +1,15 @@
+<section >
+<ul>
+  <li [className]="activeFlag[i] ? 'inactive' : 'activate'"    
+      *ngFor="let note of _notes; let i = index">{{note}}</li>
+
+</ul>
+<p>{{flagTrack}}</p>
+<div class="button is-success" (click)="startTime(4)">
+  <span class="icon is-small">
+    <i class="fas fa-play"></i>
+  </span>
+  <span>PLAY</span>
+</div>
+
+<span class="tag is-info is-large">{{timers}}</span>
