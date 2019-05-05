@@ -4,7 +4,7 @@
       *ngFor="let note of _notes; let i = index">{{note}}</li>
 
 </ul>
-<p>{{flagTrack}}</p>
+<div class="container">
 <div class="button is-success" (click)="startTime(4)">
   <span class="icon is-small">
     <i class="fas fa-play"></i>
@@ -20,3 +20,5 @@
   </span>
   <span>RESET</span>
 </div>
+</div>
+{{activeFlag}}

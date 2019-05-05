@@ -8,6 +8,8 @@ import { startTimeRange } from "@angular/core/src/profile/wtf_impl";
 })
 export class SequencerComponent implements OnInit {
   _notes: Array<String>;
+  
+  
   activeFlag = [true, true, true, true];
 
   constructor() {}
@@ -20,7 +22,7 @@ export class SequencerComponent implements OnInit {
 
   timer = this.activeFlag.length;
   counter = 0;
-  flagTrack = undefined;
+  
   startTime(time) {
     if (time > 0) {
       this.timer = time;
@@ -29,7 +31,7 @@ export class SequencerComponent implements OnInit {
        
         console.log("time init", this.activeFlag);
         this.counter++;
-        this.flagTrack = this.activeFlag;
+        
         this.startTime(time - 1);
       }, 1500);
     } else {
