@@ -20,30 +20,12 @@
 
   <!--Sharpend, flatten, -->
 <div class="neck" >
-  <section class="string">
-    <div class="note-container" *ngFor="let note of gString; let first = first"> 
-      <span [ngClass]="{ highlightCell: note == selected, first: first }"
-        class="note" [innerHTML]="note">
-      </span></div>
-  </section>
-  <section class="string">
-    <div class="note-container" *ngFor="let note of dString; let first = first"> 
-      <span [ngClass]="{ highlightCell: note == selected, first: first }"
-        class="note" [innerHTML]="note">
-      </span></div>
-  </section>
-  <section class="string">
-    <div class="note-container" *ngFor="let note of aString; let first = first"> 
-      <span [ngClass]="{ highlightCell: note == selected, first: first }"
-        class="note" [innerHTML]="note">
-      </span></div>
-  </section>
-  <section class="string">
-    <div class="note-container" *ngFor="let note of eString; let first = first"> 
-      <span [ngClass]="{ highlightCell: note == selected, first: first }"
-        class="note" [innerHTML]="note">
-      </span></div>
-  </section>
+
+  <app-string [stringName] = "gString" [selected]="selected"></app-string>
+  <app-string [stringName] = "dString" [selected]="selected"></app-string>
+  <app-string [stringName] = "aString" [selected]="selected"></app-string>
+  <app-string [stringName] = "eString" [selected]="selected"></app-string>
+  
 <section class="frets">
   <div class="fretNumbers" *ngFor="let num of fretNumber; let first = first" [ngClass]="{
     highlightFret:

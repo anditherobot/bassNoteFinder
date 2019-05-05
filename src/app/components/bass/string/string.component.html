@@ -1,0 +1,6 @@
+<section class="string">
+    <div class="note-container" *ngFor="let note of stringName; let first = first"> 
+      <span [ngClass]="{ highlightCell: note == selected, first: first }"
+        class="note" [innerHTML]="note">
+      </span></div>
+  </section>
