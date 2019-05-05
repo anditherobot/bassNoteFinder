@@ -40,74 +40,7 @@
 
 </div> <!--end neck-->
 
-   <div *ngIf="false" class="neck2" style="border: 7px solid #000;">
-      <div class="divTableRow">
-        <div
-          class="divTableCell"
-          *ngFor="let fret of gString; let first = first"
-        >
-          <span
-            [ngClass]="{ highlightCell: fret == selected, first: first }"
-            class="note"
-            [innerHTML]="fret"
-          >
-          </span>
-        </div>
-      </div>
-      <div class="divTableRow">
-        <div
-          class="divTableCell"
-          *ngFor="let fret of dString; let first = first"
-        >
-          <span
-            [ngClass]="{ highlightCell: fret == selected, first: first }"
-            class="note"
-            [innerHTML]="fret"
-          >
-          </span>
-        </div>
-      </div>
-      <div class="divTableRow">
-        <div
-          class="divTableCell"
-          *ngFor="let fret of aString; let first = first"
-        >
-          <span
-            [ngClass]="{ highlightCell: fret == selected, first: first }"
-            class="note"
-            [innerHTML]="fret"
-          >
-          </span>
-        </div>
-      </div>
-      <div class="divTableRow">
-        <div
-          class="divTableCell"
-          *ngFor="let fret of eString; let first = first"
-        >
-          <span
-            [ngClass]="{ highlightCell: fret == selected, first: first }"
-            class="note"
-            [innerHTML]="fret"
-          >
-          </span>
-        </div>
-      </div>
-      <div class="divTableRow">
-        <div
-          class="divTableCell fretNumbers"
-          *ngFor="let num of fretNumber; let first = first"
-          [ngClass]="{
-            highlightFret:
-              num == 3 || num == 5 || num == 7 || num == 9 || num == 12,
-            first: first
-          }"
-        >
-          {{ num }}
-        </div>
-      </div>
-
-  </div>
+ 
   <!-- neck.com -->
 
 
