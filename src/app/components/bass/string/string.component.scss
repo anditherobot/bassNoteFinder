@@ -29,3 +29,17 @@
         background-color: white;
         color: black;
       }
+
+      .highlightCell {
+        background-color: green !important;
+        color: black !important;
+        font-weight: bold !important;
+        border: 2px dotted grey !important;
+        box-shadow: 2px 2px #888888;
+      }
+      
+      .first {
+        background-color: darkgray;
+        color: black;
+        border: 2px solid white;
+      }
