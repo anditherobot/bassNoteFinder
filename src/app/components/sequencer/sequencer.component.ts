@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { startTimeRange } from "@angular/core/src/profile/wtf_impl";
+//import { startTimeRange } from "@angular/core/src/profile/wtf_impl";
 
 @Component({
   selector: "app-sequencer",
@@ -9,7 +9,7 @@ import { startTimeRange } from "@angular/core/src/profile/wtf_impl";
 export class SequencerComponent implements OnInit {
   _notes: Array<String>;
   
-  
+  hideElement = true;
   activeFlag = [true, true, true, true];
 
   constructor() {}

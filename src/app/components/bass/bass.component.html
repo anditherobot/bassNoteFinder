@@ -18,6 +18,8 @@
     </ul>
   </div>
 
+   <app-timeline></app-timeline>
+
   <!--Sharpend, flatten, -->
 <div class="neck" >
 
@@ -48,10 +50,15 @@
 
   <h3>By {{ author.name | uppercase }} {{ author.lastName | uppercase }}</h3>
 </section>
+<section >
+  <app-sequencer [hidden]= "!hideElement"></app-sequencer>
+
+</section>
+
 <section>
 
-  <h1 class="title">Sequencer</h1>
-  <p>Create a sequence of notes (max 4)</p>
-  <app-sequencer></app-sequencer>
+  <h1 class="title">Scales</h1>
+
+  <app-scales></app-scales>
 
 </section>

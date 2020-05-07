@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { BassComponent } from './components/bass/bass.component';
 import { SequencerComponent } from './components/sequencer/sequencer.component';
 import { StringComponent } from './components/bass/string/string.component';
+import { ScalesComponent } from './components/scales/scales.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BassComponent,
     SequencerComponent,
-    StringComponent
+    StringComponent,
+    ScalesComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,

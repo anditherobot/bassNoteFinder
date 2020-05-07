@@ -1,4 +1,8 @@
 <section >
+<h1 class="title">Sequencer</h1>
+  <p>Create a sequence of notes (max 4)</p>
+
+
 <ul>
   <li [className]="activeFlag[i] ? 'inactive' : 'activate'"    
       *ngFor="let note of _notes; let i = index">{{note}}</li>
