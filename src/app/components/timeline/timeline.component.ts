@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimelineComponent implements OnInit {
 
+
+  selectednotes= [] ;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  assembleNotes(value) {
+    this.selectednotes.push(value);
+    console.log("assembling", this.selectednotes);
+    
   }
 
 }

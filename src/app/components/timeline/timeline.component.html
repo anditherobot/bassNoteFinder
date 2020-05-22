@@ -9,6 +9,10 @@
  <article class="message">
   <div class="message-body">
 Type notes separated by commas to generate a sequence. From that sequence you can switch notes...
+<input #box (keyup)="onKey(box.value)">
+    <p>{{values}}</p>
   </div>
+
+  <div class="selectedNotes">{{selectedNotes ? selectedNotes : "No selected notes yet"}}</div>
 </article>
   </div>
